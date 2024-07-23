@@ -9,7 +9,7 @@ import { News } from "@/app/_libs/microcms";
 //   id: string;
 //   title: string;
 //   category: {
-//     name: string;
+//     name: string;a
 //   };
 
 //   publishedAt: string;
