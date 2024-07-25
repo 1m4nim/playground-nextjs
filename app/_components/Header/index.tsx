@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./index.module.css";
+import Menu from "../Menu";
 
 export default function Header() {
   return (
@@ -10,13 +11,14 @@ export default function Header() {
           src="/fungi2.jpg"
           alt=""
           className={styles.logo}
-          width={348}
-          height={133}
+          width={500}
+          height={500}
           priority
         />
       </Link>
+      <Menu />
 
-      <nav className={styles.nav}>
+      {/* <nav className={styles.nav}>
         <ul className={styles.items}>
           <li>
             <Link href="/news">ニュース</Link>
@@ -30,7 +32,7 @@ export default function Header() {
             <Link href="/contact">お問い合わせ</Link>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </header>
   );
 }

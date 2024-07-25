@@ -50,19 +50,19 @@ export default function Page() {
         <p className={styles.empty}>メンバーが登録されていません</p>
       ) : (
         <ul>
-          {data.contents.map((member) => (
-            <li key={member.id} className={styles.list}>
+          {data.contents.map((members) => (
+            <li key={members.id} className={styles.list}>
               <Image
-                src={member.image.url}
+                src={members.image.url}
                 alt=""
-                width={member.image.width}
-                height={member.image.height}
+                width={members.image.width}
+                height={members.image.height}
                 className={styles.image}
               />
               <dl>
-                <dt className={styles.name}>{member.name}</dt>
-                <dd className={styles.position}>{member.position}</dd>
-                <dd className={styles.profile}>{member.profile}</dd>
+                <dt className={styles.name}>{members.name}</dt>
+                <dd className={styles.position}>{members.position}</dd>
+                <dd className={styles.profile}>{members.profile}</dd>
               </dl>
             </li>
           ))}
