@@ -1,45 +1,48 @@
 import Image from "next/image";
+import { getMembersList } from "../_libs/microcms";
+import { MEMBERS_LIST_LIMIT } from "../_components/_constants";
 import styles from "./page.module.css";
 
-const data = {
-  contents: [
-    {
-      id: "1",
-      image: {
-        url: "/member1.png",
-        width: 240,
-        height: 240,
-      },
-      name: "にこにこ",
-      position: "CEO",
-      profile: "いつもにこにこしていて優しい",
-    },
-    {
-      id: "2",
-      image: {
-        url: "/member2.png",
-        width: 240,
-        height: 240,
-      },
-      name: "はいから",
-      position: "COO",
-      profile: "いつもおしゃれで、時代を先駆けていく",
-    },
-    {
-      id: "3",
-      image: {
-        url: "/member3.png",
-        width: 240,
-        height: 240,
-      },
-      name: "スミス・テリー",
-      position: "CTO",
-      profile: "「常に思考」がモットーの仕事のできる超人",
-    },
-  ],
-};
+// const data = {
+//   contents: [
+//     {
+//       id: "1",
+//       image: {
+//         url: "/member1.png",
+//         width: 240,
+//         height: 240,
+//       },
+//       name: "にこにこ",
+//       position: "CEO",
+//       profile: "いつもにこにこしていて優しい",
+//     },
+//     {
+//       id: "2",
+//       image: {
+//         url: "/member2.png",
+//         width: 240,
+//         height: 240,
+//       },
+//       name: "はいから",
+//       position: "COO",
+//       profile: "いつもおしゃれで、時代を先駆けていく",
+//     },
+//     {
+//       id: "3",
+//       image: {
+//         url: "/member3.png",
+//         width: 240,
+//         height: 240,
+//       },
+//       name: "スミス・テリー",
+//       position: "CTO",
+//       profile: "「常に思考」がモットーの仕事のできる超人",
+//     },
+//   ],
+// };
 
-export default function Page() {
+export default async function Page() {
+  const data = await getMembersList({ limit: MEMBERS_LIST_LIMIT });
   return (
     // <div style={{ margin: 20 }}>
     //   <h1>メンバーページ</h1>
