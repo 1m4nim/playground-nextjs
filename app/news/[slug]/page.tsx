@@ -14,6 +14,8 @@ type Props = {
   };
 };
 
+export const revalidate = 0;
+
 export default async function Page({ params, searchParams }: Props) {
   //   return <div>{JSON.stringify(props)}</div>;
   const data = await getNewsDetail(params.slug, {
