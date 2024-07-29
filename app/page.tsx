@@ -53,7 +53,7 @@ import ButtonLink from "@/app/_components/ButtonLink";
 
 export default async function Home() {
   // const sliceData = data.contents.slice(0, 2);
-  const name = "minami";
+  const name = "1m4nim";
 
   const data = await getNewsList({
     limit: TOP_NEWS_LIMIT,
@@ -63,7 +63,7 @@ export default async function Home() {
     <>
       <section className={styles.top}>
         <div>
-          <h1 className={styles.title}>minamiの努力</h1>
+          <h1 className={styles.title}>はじめてのNext.js</h1>
           <p className={styles.description}>{name}は知識人になりたい</p>
         </div>
 
