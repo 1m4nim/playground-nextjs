@@ -51,6 +51,8 @@ import ButtonLink from "@/app/_components/ButtonLink";
 //   ],
 // };
 
+export const revalidate = 60;
+
 export default async function Home() {
   // const sliceData = data.contents.slice(0, 2);
   const name = "1m4nim";
